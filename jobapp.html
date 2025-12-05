@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test</title>
+        <style>
+            body{
+                display: flex;
+                justify-content: center;
+                padding: 30px 0;
+
+            }
+            form{
+                padding:30px;
+                width: 350px;
+                background-color: aliceblue;
+                background-origin: padding-box;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                
+                
+            }
+            h2{
+                text-align: center;
+                margin-top: 0;
+            }
+            button{
+                background-color: green;
+                width: 100%;
+            }
+            button:hover{
+                background-color: rgb(84, 210, 84);
+            }
+        </style>
+        <script>
+            function clickaction(e){
+
+            const name=document.getElementById("name").value;
+            const email=document.getElementById("email").value;
+            const phone=document.getElementById("phone").value;
+            const role=document.getElementById("role").value;
+            const dob=document.getElementById("dob").value
+
+            if(dob==""){
+                alert("Fill all Elements");
+            }
+
+            console.log(name);
+            console.log(email);
+            console.log(phone);
+            console.log(role);
+            }
+        </script>
+    </head>
+    <body>
+        <form action="#">
+            <h2>Job Application</h2>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" placeholder="Enter Full name"required><br>
+ 
+            <label for="dob">Dob</label>
+            <input type="date" nmae="dob" id="dob"><br>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" name="phone" id="phone" placeholder="0123456789" maxlength="10" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="name@example.com"><br>
+
+            <label for="gender">Gender:</label>
+            <input type="radio" name="gender" id="male" value="male">Male
+            <input type="radio" name="gender" id="female" value="female">Female<br>
+
+
+            <label for="role">Role:</label>
+            <select name="role" id="role">
+                <option value="Fullstack">Fullstack</option>
+                <option value="Java">Java</option>
+            </select><br>
+            
+            <button type="submit" onclick="clickaction(Event)">Submit</button>
+
+
+        </form>
+    </body>
+</html>
